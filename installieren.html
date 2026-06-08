@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installieren · mamabande</title>
+  <meta name="theme-color" content="#5E1AF4" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F7F1EA', ink: '#241B3A',
+            purple: { DEFAULT: '#5E1AF4', soft: '#7669E9' },
+            lilac: '#D599FB', orange: '#FF6230', pink: '#F8BCCA', peach: '#FFBE98',
+          },
+          fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #241B3A; }
+    .font-display { font-family: 'Fraunces', serif; font-variation-settings: 'SOFT' 40, 'WONK' 1; }
+    .key { font-weight: 600; color: #241B3A; background: #fff; border: 1px solid rgba(36,27,58,.12); border-radius: 6px; padding: 1px 7px; white-space: nowrap; }
+  </style>
+</head>
+
+<body class="bg-cream antialiased">
+
+  <header class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-ink/10">
+    <div class="mx-auto max-w-3xl px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-display text-2xl font-black tracking-tight text-ink">mamabande</a>
+      <a href="index.html" class="text-sm text-ink/60 hover:text-ink transition-colors">← Zurück</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-5 md:px-8 py-16 md:py-24">
+    <div class="text-center mb-12">
+      <span class="inline-block font-bold text-xs uppercase tracking-widest text-orange mb-4">Installieren</span>
+      <h1 class="font-display font-black text-ink text-4xl md:text-5xl tracking-tight mb-3">mamabande wie eine App.</h1>
+      <p class="mx-auto max-w-lg text-ink/70 leading-relaxed">mamabande gibt es nicht im App-Store, und das ist Absicht. Du brauchst nichts herunterzuladen. Leg sie Dir mit einem Tippen auf den Startbildschirm, danach öffnest Du sie wie jede andere App.</p>
+    </div>
+
+    <div class="space-y-5">
+      <div class="rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
+        <p class="text-xs font-bold uppercase tracking-widest text-purple mb-3">iPhone &amp; iPad</p>
+        <p class="text-ink/75 leading-relaxed">Öffne mamabande in Safari. Tippe unten auf <span class="key">Teilen</span> (das Quadrat mit dem Pfeil nach oben), dann auf <span class="key">Zum Home-Bildschirm</span>.</p>
+      </div>
+      <div class="rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
+        <p class="text-xs font-bold uppercase tracking-widest text-purple mb-3">Android</p>
+        <p class="text-ink/75 leading-relaxed">Öffne mamabande in Chrome. Tippe oben rechts auf <span class="key">⋮</span>, dann auf <span class="key">App installieren</span> oder <span class="key">Zum Startbildschirm hinzufügen</span>.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-ink/60 mb-6">Du kannst auch erst loslegen und mamabande später installieren.</p>
+      <a href="https://mamahood.vercel.app"
+        class="inline-flex items-center gap-2 rounded-full bg-purple text-white font-bold px-7 py-3.5 shadow-xl shadow-purple/30 hover:-translate-y-0.5 transition-transform">
+        Finde Deine Bande →
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-ink text-cream/70 px-5 md:px-8 py-12">
+    <div class="mx-auto max-w-6xl flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+      <span class="font-display text-base text-cream/85">✶ Building in Public</span>
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+        <a href="so-funktionierts.html" class="hover:text-cream">So funktioniert's</a>
+        <a href="faq.html" class="hover:text-cream">FAQ</a>
+        <a href="installieren.html" class="text-cream">Installieren</a>
+        <a href="datenschutz.html" class="hover:text-cream">Datenschutz</a>
+        <a href="impressum.html" class="hover:text-cream">Impressum</a>
+        <a href="kontakt.html" class="hover:text-cream">Kontakt</a>
+      </nav>
+      <p class="font-display font-black text-cream text-lg">mamabande</p>
+    </div>
+  </footer>
+</body>
+
+</html>

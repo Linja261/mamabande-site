@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum · mamabande</title>
+  <meta name="theme-color" content="#5E1AF4" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F7F1EA', ink: '#241B3A',
+            purple: { DEFAULT: '#5E1AF4', soft: '#7669E9' },
+            lilac: '#D599FB', orange: '#FF6230', pink: '#F8BCCA', peach: '#FFBE98',
+          },
+          fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #241B3A; }
+    .font-display { font-family: 'Fraunces', serif; font-variation-settings: 'SOFT' 40, 'WONK' 1; }
+  </style>
+</head>
+
+<body class="bg-cream antialiased">
+
+  <header class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-ink/10">
+    <div class="mx-auto max-w-3xl px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-display text-2xl font-black tracking-tight text-ink">mamabande</a>
+      <a href="index.html" class="text-sm text-ink/60 hover:text-ink transition-colors">← Zurück</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-5 md:px-8 py-16 md:py-24">
+    <h1 class="font-display font-black text-ink text-4xl md:text-5xl tracking-tight mb-10">Impressum</h1>
+
+    <div class="space-y-8 text-ink/75 leading-relaxed max-w-2xl">
+      <div>
+        <p class="font-semibold text-ink mb-1">Angaben gemäß § 5 TMG</p>
+        <p>Linja Scharffetter</p>
+        <p class="text-orange font-medium">[Straße und Hausnummer, PLZ Ort werden ergänzt]</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-ink mb-1">Kontakt</p>
+        <p>E-Mail: scharffetter@linja.me</p>
+        <p>Telefon: +49 172 472 5757</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-ink mb-1">Umsatzsteuer-ID</p>
+        <p>Wird nachgetragen.</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-ink mb-1">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</p>
+        <p>Linja Scharffetter (Anschrift wie oben)</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-ink mb-1">Haftungsausschluss</p>
+        <p>Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-ink mb-1">Hinweis</p>
+        <p>mamabande ist ein junges, gemeinwohlorientiertes Herzensprojekt und kein gewerblicher Marktplatz. Über den Button gelangst Du in die App, die technisch getrennt betrieben wird.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-ink text-cream/70 px-5 md:px-8 py-12">
+    <div class="mx-auto max-w-6xl flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+      <span class="font-display text-base text-cream/85">✶ Building in Public</span>
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+        <a href="so-funktionierts.html" class="hover:text-cream">So funktioniert's</a>
+        <a href="faq.html" class="hover:text-cream">FAQ</a>
+        <a href="installieren.html" class="hover:text-cream">Installieren</a>
+        <a href="datenschutz.html" class="hover:text-cream">Datenschutz</a>
+        <a href="impressum.html" class="text-cream">Impressum</a>
+        <a href="kontakt.html" class="hover:text-cream">Kontakt</a>
+      </nav>
+      <p class="font-display font-black text-cream text-lg">mamabande</p>
+    </div>
+  </footer>
+</body>
+
+</html>
