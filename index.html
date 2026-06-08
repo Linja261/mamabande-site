@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mamabande · Finde Deine Bande</title>
+  <meta name="description"
+    content="Lerne Mütter in Deiner Stadt kennen, mit denen Du wirklich Du sein kannst. Über das, was Dich ausmacht, nicht über das Alter Deiner Kinder. Kostenlos, hyperlokal, ein sicherer Raum." />
+  <meta name="theme-color" content="#5E1AF4" />
+  <meta name="robots" content="noindex" /><!-- Entwurf: noch nicht bei Google listen -->
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="mamabande · Finde Deine Bande" />
+  <meta property="og:description"
+    content="Mütter in Deiner Stadt kennenlernen, mit denen Du wirklich Du sein kannst. Kostenlos, hyperlokal, sicher." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F7F1EA',
+            ink: '#241B3A',
+            purple: { DEFAULT: '#5E1AF4', soft: '#7669E9' },
+            lilac: '#D599FB',
+            orange: '#FF6230',
+            pink: '#F8BCCA',
+            peach: '#FFBE98',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #241B3A; }
+    .font-display { font-family: 'Fraunces', serif; font-variation-settings: 'SOFT' 40, 'WONK' 1; }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+    html, body { overflow-x: hidden; }
+  </style>
+</head>
+
+<body class="bg-cream antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-ink/10">
+    <div class="mx-auto max-w-6xl px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="font-display text-2xl font-black tracking-tight text-ink">mamabande</a>
+      <a href="https://mamahood.vercel.app" onclick="track('cta_header')"
+        class="hidden sm:inline-flex items-center gap-2 rounded-full bg-purple text-white font-600 text-sm px-5 py-2.5 shadow-xl shadow-purple/30 hover:-translate-y-0.5 transition-transform">
+        Mitmachen
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO (cream) ===================== -->
+    <section class="relative overflow-hidden bg-cream px-5 md:px-8 pt-14 pb-20 md:pt-24 md:pb-28">
+      <div class="pointer-events-none absolute -top-20 -right-16 w-72 h-72 md:w-[28rem] md:h-[28rem] rounded-full bg-lilac/60 blur-2xl"></div>
+      <div class="pointer-events-none absolute top-40 -left-24 w-64 h-64 rounded-full bg-peach/60 blur-2xl"></div>
+
+      <div class="relative mx-auto max-w-3xl text-center">
+        <span class="inline-block rounded-full bg-pink/70 text-ink font-bold text-xs uppercase tracking-widest px-4 py-1.5 mb-6">
+          Mütter-Freundinnen in Deiner Stadt
+        </span>
+        <h1 class="font-display font-black text-ink leading-[0.95] tracking-tight text-6xl sm:text-7xl md:text-8xl mb-6">
+          Finde Deine <span class="text-purple">Bande</span>.
+        </h1>
+        <p class="mx-auto max-w-xl text-lg md:text-xl text-ink/75 leading-relaxed mb-9">
+          Lerne Mütter in Deiner Stadt kennen, die sich für dieselben Dinge interessieren wie Du. Du bist nicht nur Mama, sondern auch Mensch. Findet Euch über das, was Euch ausmacht, nicht über das Alter Eurer Kinder.
+        </p>
+        <a href="https://mamahood.vercel.app" onclick="track('cta_hero')"
+          class="inline-flex items-center gap-2 rounded-full bg-purple text-white font-bold text-lg px-8 py-4 shadow-xl shadow-purple/30 hover:-translate-y-0.5 transition-transform">
+          Finde Deine Mamas
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <p class="mt-5 text-sm text-ink/50 font-medium">Kostenlos · in 2 Minuten startklar · lokal in Deiner Stadt</p>
+      </div>
+    </section>
+
+    <!-- Welle: cream -> ink (echte Farbgrenze) -->
+    <div aria-hidden="true" class="bg-cream leading-[0]">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="block w-full h-10 md:h-12">
+        <path d="M0,18 Q150,6 300,18 T600,18 T900,18 T1200,18 V40 H0 Z" fill="#241B3A" />
+      </svg>
+    </div>
+
+    <!-- ===================== PROBLEM (ink) ===================== -->
+    <section class="bg-ink text-cream px-5 md:px-8 py-20 md:py-28">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="reveal inline-block font-bold text-xs uppercase tracking-widest text-lilac mb-4">Das Problem</span>
+        <h2 class="reveal font-display font-black leading-[1.05] tracking-tight text-4xl md:text-6xl mb-7">
+          Du bist umgeben von Müttern. Und trotzdem teilt ihr kaum gemeinsame Interessen.
+        </h2>
+        <p class="reveal mx-auto max-w-2xl text-lg md:text-xl text-cream/75 leading-relaxed mb-12">
+          Kurse, Spielgruppen, Klinik: Du triffst ständig andere Mütter, aber zusammengewürfelt nach Geburtstermin, nicht nach dem, was Dich ausmacht. Es geht um Schlafrhythmus, Beikost, Meilensteine. Selten um Dich als die Frau hinter der Mama. Damit bist Du nicht allein:
+        </p>
+        <div class="reveal mx-auto max-w-2xl flex flex-col sm:flex-row items-start sm:items-center gap-4 rounded-3xl bg-purple/30 ring-1 ring-lilac/30 p-7 text-left">
+          <span class="font-display font-black text-orange text-6xl md:text-7xl leading-none">67%</span>
+          <p class="text-cream/85 text-base md:text-lg leading-snug">
+            der Mütter fühlen sich nach der Geburt einsam.
+            <span class="block text-cream/50 text-sm mt-1">Kantar-Studie, 2025</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WIE ES GEHT (peach) ===================== -->
+    <section class="bg-peach px-5 md:px-8 py-20 md:py-28">
+      <div class="mx-auto max-w-5xl">
+        <div class="text-center mb-12 md:mb-16">
+          <span class="reveal inline-block font-bold text-xs uppercase tracking-widest text-orange mb-4">So geht's</span>
+          <h2 class="reveal font-display font-black text-ink leading-[1.05] tracking-tight text-4xl md:text-6xl">
+            In drei Schritten zu Deiner Bande.
+          </h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3 items-stretch">
+          <div class="reveal h-full flex flex-col rounded-[28px] bg-cream p-7 shadow-xl shadow-ink/5 md:rotate-[-1.5deg]">
+            <div class="w-14 h-14 rounded-2xl bg-lilac/70 flex items-center justify-center text-2xl mb-5">✨</div>
+            <h3 class="font-display font-bold text-2xl text-ink mb-2">Zeig, wer Du bist</h3>
+            <p class="text-ink/70 leading-relaxed">Erstelle in zwei Minuten Dein Profil und erzähle, was Dich ausmacht.</p>
+          </div>
+          <div class="reveal h-full flex flex-col rounded-[28px] bg-cream p-7 shadow-xl shadow-ink/5 md:rotate-[1.5deg]">
+            <div class="w-14 h-14 rounded-2xl bg-pink/80 flex items-center justify-center text-2xl mb-5">📍</div>
+            <h3 class="font-display font-bold text-2xl text-ink mb-2">Entdecke, wer in der Nähe ist</h3>
+            <p class="text-ink/70 leading-relaxed">Lerne Mütter aus Deiner Stadt kennen, die wirklich zu Dir passen. Immer lokal, nie quer durch Deutschland.</p>
+          </div>
+          <div class="reveal h-full flex flex-col rounded-[28px] bg-cream p-7 shadow-xl shadow-ink/5 md:rotate-[-1deg]">
+            <div class="w-14 h-14 rounded-2xl bg-purple/20 flex items-center justify-center text-2xl mb-5">💬</div>
+            <h3 class="font-display font-bold text-2xl text-ink mb-2">Schreib und triff Dich</h3>
+            <p class="text-ink/70 leading-relaxed">Ein fertiger erster Satz nimmt die Hürde. Ihr entscheidet: gemeinsam mit den Kleinen oder erst einmal allein.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DIFFERENZIERUNG (lilac) ===================== -->
+    <section class="bg-lilac px-5 md:px-8 py-20 md:py-28">
+      <div class="mx-auto max-w-4xl">
+        <div class="text-center mb-12">
+          <span class="reveal inline-block font-bold text-xs uppercase tracking-widest text-purple mb-4">Was uns ausmacht</span>
+          <h2 class="reveal font-display font-black text-ink leading-[1.05] tracking-tight text-4xl md:text-6xl">
+            Was wir anders machen.
+          </h2>
+        </div>
+        <div class="space-y-5">
+          <div class="reveal flex gap-5 rounded-3xl bg-cream/90 p-6 md:p-7">
+            <span class="text-3xl shrink-0">💜</span>
+            <div>
+              <h3 class="font-display font-bold text-xl md:text-2xl text-ink mb-1">Du stehst im Mittelpunkt, nicht das Kind</h3>
+              <p class="text-ink/70 leading-relaxed">Ihr findet Euch über Interessen und Lebensgefühl, nicht über den ähnlichen Geburtstermin.</p>
+            </div>
+          </div>
+          <div class="reveal flex gap-5 rounded-3xl bg-cream/90 p-6 md:p-7">
+            <span class="text-3xl shrink-0">📍</span>
+            <div>
+              <h3 class="font-display font-bold text-xl md:text-2xl text-ink mb-1">Wirklich lokal in Deiner Nähe</h3>
+              <p class="text-ink/70 leading-relaxed">Jede Stadt ist ihr eigener Kreis. Du siehst nur Mütter aus Deiner Umgebung, mit denen ein Treffen unkompliziert machbar ist.</p>
+            </div>
+          </div>
+          <div class="reveal flex gap-5 rounded-3xl bg-cream/90 p-6 md:p-7">
+            <span class="text-3xl shrink-0">⚡</span>
+            <div>
+              <h3 class="font-display font-bold text-xl md:text-2xl text-ink mb-1">„Wer hat heute Zeit?"</h3>
+              <p class="text-ink/70 leading-relaxed">Funk spontan an Deine Bande, dass Du gerade Zeit für einen Ausflug oder einen Kaffee hast. Nur an Deine Verbindungen, nie an Fremde.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VERTRAUEN (primary-soft) ===================== -->
+    <section class="px-5 md:px-8 py-20 md:py-28" style="background-color:#7669E9;">
+      <div class="mx-auto max-w-3xl text-center text-white">
+        <span class="reveal inline-block font-bold text-xs uppercase tracking-widest text-white/80 mb-4">Ein sicherer Raum</span>
+        <h2 class="reveal font-display font-black leading-[1.05] tracking-tight text-4xl md:text-6xl mb-7">
+          Ein Ort, an dem Du sicher bist.
+        </h2>
+        <p class="reveal mx-auto max-w-2xl text-lg md:text-xl text-white/85 leading-relaxed mb-10">
+          Verifizierte Profile, ein klarer Kodex, kein offener Marktplatz. Ein Mensch prüft jedes Profil und bestätigt die Echtheit. Du entscheidest, wann Du wen triffst.
+        </p>
+        <div class="reveal flex flex-wrap justify-center gap-3">
+          <span class="rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white">✓ Von Hand geprüft</span>
+          <span class="rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white">🔒 Nur Stadt-Ebene, kein GPS</span>
+          <span class="rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white">🤝 Klarer Kodex</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welle: primary-soft -> orange -->
+    <div aria-hidden="true" class="leading-[0]" style="background-color:#7669E9;">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="block w-full h-10 md:h-12">
+        <path d="M0,18 Q150,6 300,18 T600,18 T900,18 T1200,18 V40 H0 Z" fill="#FF6230" />
+      </svg>
+    </div>
+
+    <!-- ===================== FINAL CTA (orange, CTA = ink) ===================== -->
+    <section class="relative overflow-hidden bg-orange px-5 md:px-8 py-24 md:py-32 text-center">
+      <div class="pointer-events-none absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-pink/50 blur-2xl"></div>
+      <div class="relative mx-auto max-w-2xl">
+        <h2 class="reveal font-display font-black text-cream leading-[1.0] tracking-tight text-5xl md:text-7xl mb-6">
+          Deine Bande wartet schon.
+        </h2>
+        <p class="reveal mx-auto max-w-lg text-lg md:text-xl text-cream/90 leading-relaxed mb-9">
+          mamabande ist neu und wächst Stadt für Stadt. Wir starten im Kreis Unna. Sei eine der Ersten in Deiner Stadt, egal wo Du wohnst. Gemeinsam bauen wir auch Deine Bande auf.
+        </p>
+        <a href="https://mamahood.vercel.app" onclick="track('cta_final')"
+          class="reveal inline-flex items-center gap-2 rounded-full bg-ink text-cream font-bold text-lg px-8 py-4 shadow-xl shadow-ink/30 hover:-translate-y-0.5 transition-transform">
+          Finde Deine Mamas
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Welle: orange -> cream -->
+    <div aria-hidden="true" class="bg-orange leading-[0]">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="block w-full h-10 md:h-12">
+        <path d="M0,18 Q150,6 300,18 T600,18 T900,18 T1200,18 V40 H0 Z" fill="#F7F1EA" />
+      </svg>
+    </div>
+
+    <!-- ===================== GRÜNDERIN-GESCHICHTE (cream) ===================== -->
+    <section class="bg-cream px-5 md:px-8 py-20 md:py-28">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid gap-10 md:grid-cols-2 md:gap-14 items-center">
+
+          <!-- Foto-Collage (Oskars Gesicht anonymisiert) -->
+          <div class="reveal order-1">
+            <div class="grid grid-cols-2 gap-3 md:gap-4 max-w-md mx-auto">
+              <img src="images/img_2673.jpg" alt="Linja mit Eis auf dem Marktplatz" loading="lazy"
+                class="aspect-[4/5] w-full object-cover rounded-[24px] shadow-xl shadow-ink/10 md:rotate-[-2deg]" />
+              <img src="images/img_4221.jpg" alt="Linja im Regen unterwegs" loading="lazy"
+                class="aspect-[4/5] w-full object-cover rounded-[24px] shadow-xl shadow-ink/10 md:rotate-[2deg] md:mt-6" />
+              <img src="images/img_4561.jpg" alt="Linja mit Kind, Selfie im Grünen" loading="lazy"
+                class="aspect-[4/5] w-full object-cover rounded-[24px] shadow-xl shadow-ink/10 md:rotate-[1.5deg]" />
+              <img src="images/img_4599.jpg" alt="Linja mit Kind beim Zoobesuch" loading="lazy"
+                class="aspect-[4/5] w-full object-cover rounded-[24px] shadow-xl shadow-ink/10 md:rotate-[-1.5deg] md:-mt-2" />
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="order-2">
+            <span class="reveal inline-block font-bold text-xs uppercase tracking-widest text-orange mb-4">Wer wir sind</span>
+            <h2 class="reveal font-display font-black text-ink leading-[1.05] tracking-tight text-4xl md:text-5xl mb-6">
+              Warum mamabande.
+            </h2>
+            <div class="reveal space-y-4 text-base md:text-lg text-ink/75 leading-relaxed">
+              <p>Nach der Geburt meines Sohnes war ich ständig von Menschen umgeben und fühlte mich trotzdem einsam. Egal wo ich war, es ging viel ums Kind und wenig um mich als Frau hinter der Mama. Selbst in den organisierten Kursen fiel es mir schwer, mit anderen Müttern wirklich in tiefe Gespräche zu kommen.</p>
+              <p>Meine Freundinnen von früher wohnen weiter weg und sind nicht immer spontan verfügbar, weil ihr Alltag sich stark von meinem unterscheidet. Dabei ist die Zeit als Neu-Mama unglaublich prägend. Noch nie hatte ich so viel freie Zeit und war gleichzeitig so unflexibel. Am Ende saß ich oft allein zu Hause, weil mir die Kraft für Ausflüge allein gefehlt hat.</p>
+              <p>Ich habe mamabande gebaut, weil ich genau das gebraucht hätte: ein paar echte Freundinnen in der Nähe, die mich als Frau sehen, nicht nur als Mama. Die dasselbe erleben und Lust haben, spontan etwas zu unternehmen. Und ich bin sicher, dass es Dir vielleicht genauso geht.</p>
+              <p class="font-display font-semibold text-ink text-xl">Komm dazu. Deine Bande ist näher, als Du denkst.</p>
+            </div>
+            <a href="https://mamahood.vercel.app" onclick="track('cta_story')"
+              class="reveal mt-7 inline-flex items-center gap-2 rounded-full bg-purple text-white font-bold px-6 py-3.5 shadow-xl shadow-purple/30 hover:-translate-y-0.5 transition-transform">
+              Finde Deine Mamas
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (ink) ===================== -->
+  <footer class="bg-ink text-cream/70 px-5 md:px-8 py-12">
+    <div class="mx-auto max-w-6xl flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <p class="font-display font-black text-cream text-xl">mamabande · <span class="font-sans font-medium text-cream/60 text-base">Finde Deine Bande.</span></p>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <a href="#" class="hover:text-cream">Datenschutz</a>
+        <a href="#" class="hover:text-cream">Impressum</a>
+        <a href="mailto:hallo@mamabande.de" class="hover:text-cream">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===================== STICKY MOBILE CTA ===================== -->
+  <div id="mobileCta"
+    class="md:hidden fixed bottom-0 inset-x-0 z-50 p-3 bg-cream/90 backdrop-blur border-t border-ink/10 translate-y-full transition-transform duration-300">
+    <a href="https://mamahood.vercel.app" onclick="track('cta_sticky')"
+      class="flex items-center justify-center gap-2 rounded-full bg-purple text-white font-bold text-base py-4 shadow-xl shadow-purple/30">
+      Finde Deine Mamas
+      <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function track(event) {
+      try { if (window.umami) window.umami.track(event); } catch (e) {}
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // Sticky Mobile-CTA: erst nach dem Hero einblenden
+    const sticky = document.getElementById('mobileCta');
+    const hero = document.querySelector('main > section');
+    const heroObs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) sticky.classList.add('translate-y-full');
+        else sticky.classList.remove('translate-y-full');
+      });
+    }, { threshold: 0 });
+    if (hero) heroObs.observe(hero);
+  </script>
+</body>
+
+</html>
