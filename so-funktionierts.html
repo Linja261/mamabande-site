@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#5E1AF4" />
   <meta name="robots" content="noindex" />
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%235E1AF4'/><path d='M16 25.2c-1.6-1.3-7.2-5.2-7.2-10A4.6 4.6 0 0 1 16 11.6a4.6 4.6 0 0 1 7.2 3.6c0 4.8-5.6 8.7-7.2 10z' fill='%23F7F1EA'/></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -32,6 +32,9 @@
   <style>
     body { font-family: 'Inter', sans-serif; color: #241B3A; }
     .font-display { font-family: 'Fraunces', serif; font-variation-settings: 'SOFT' 40, 'WONK' 1; }
+    /* Strich-Icons statt Emoji: erben die Markenfarbe und sehen auf jedem
+       Gerät gleich aus, statt vom Emoji-Satz des Betriebssystems abzuhängen. */
+    .ico { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   </style>
 </head>
 
@@ -52,35 +55,43 @@
     </div>
 
     <div class="space-y-5">
-      <div class="flex gap-5 rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-        <div class="w-14 h-14 shrink-0 rounded-2xl bg-lilac/70 flex items-center justify-center text-2xl">✨</div>
+      <div class="flex gap-5 rounded-[28px] bg-white shadow-lg shadow-ink/5 p-6 md:p-7">
+        <div class="w-14 h-14 shrink-0 rounded-2xl bg-lilac/70 text-ink flex items-center justify-center">
+          <svg class="ico w-7 h-7" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+        </div>
         <div>
           <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Schritt 1</p>
-          <h2 class="font-display font-bold text-2xl text-ink mb-2">Zeig, wer Du bist</h2>
-          <p class="text-ink/70 leading-relaxed">Erstelle in zwei Minuten ein Profil, das nicht nur „Mama von" sagt, sondern was Dich ausmacht: Deine Interessen, Dein Lebensgefühl, was Du am liebsten machst. Keine leeren Felder, kein Druck, Du füllst nur aus, was Du teilen magst.</p>
+          <h2 class="font-display font-bold text-2xl text-ink mb-2">Du und Deine Interessen zählen</h2>
+          <p class="text-ink/70 leading-relaxed">Basierend auf Deinem Profil und Deinen Interessen werden Dir Mütter aus der Nähe vorgeschlagen. Das Alter Deines Kindes ist dabei zweitrangig. Dein Profil ist in zwei Minuten erstellt, und Du füllst nur aus, was Du teilen magst.</p>
         </div>
       </div>
 
-      <div class="flex gap-5 rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-        <div class="w-14 h-14 shrink-0 rounded-2xl bg-pink/80 flex items-center justify-center text-2xl">📍</div>
+      <div class="flex gap-5 rounded-[28px] bg-white shadow-lg shadow-ink/5 p-6 md:p-7">
+        <div class="w-14 h-14 shrink-0 rounded-2xl bg-pink/80 text-ink flex items-center justify-center">
+          <svg class="ico w-7 h-7" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
         <div>
           <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Schritt 2</p>
-          <h2 class="font-display font-bold text-2xl text-ink mb-2">Entdecke, wer in der Nähe ist</h2>
-          <p class="text-ink/70 leading-relaxed">mamabande zeigt Dir Mütter aus Deiner eigenen Stadt, die zu Dir passen, mit einem ehrlichen „Warum ihr passt". Immer lokal, nie quer durch Deutschland, damit ein Treffen auch wirklich machbar ist.</p>
+          <h2 class="font-display font-bold text-2xl text-ink mb-2">Verbindungen in Deiner Nähe</h2>
+          <p class="text-ink/70 leading-relaxed">Lerne Mütter aus Deiner Stadt kennen, die wirklich zu Dir und Deinen Interessen passen. Immer lokal, nie quer durch Deutschland. Zu jedem Vorschlag siehst Du ein ehrliches „Warum ihr passt".</p>
         </div>
       </div>
 
-      <div class="flex gap-5 rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-        <div class="w-14 h-14 shrink-0 rounded-2xl bg-purple/20 flex items-center justify-center text-2xl">💬</div>
+      <div class="flex gap-5 rounded-[28px] bg-white shadow-lg shadow-ink/5 p-6 md:p-7">
+        <div class="w-14 h-14 shrink-0 rounded-2xl bg-purple/20 text-ink flex items-center justify-center">
+          <svg class="ico w-7 h-7" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="3"/><path d="M3 10h18"/><path d="m8.5 15.5 2.2 2.2 4.3-4.3"/></svg>
+        </div>
         <div>
           <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Schritt 3</p>
-          <h2 class="font-display font-bold text-2xl text-ink mb-2">Schreib und triff Dich</h2>
-          <p class="text-ink/70 leading-relaxed">Ein vorgeschlagener erster Satz nimmt die Hürde der Kontaktaufnahme. Ihr entscheidet, wie Ihr Euch trefft: meist mit den Kleinen auf dem Spielplatz oder im Café, manchmal auch erst einmal allein.</p>
+          <h2 class="font-display font-bold text-2xl text-ink mb-2">Echtes Treffen koordinieren</h2>
+          <p class="text-ink/70 leading-relaxed">Organisiert Termine mit einzelnen Müttern oder der ganzen Bande, inklusive empfohlener Orte und Ausflugsziele. Ein vorgeschlagener erster Satz nimmt die Hürde der Kontaktaufnahme, und Ihr entscheidet, wie Ihr Euch trefft: meist mit den Kleinen auf dem Spielplatz oder im Café, manchmal auch erst einmal allein.</p>
         </div>
       </div>
 
       <div class="flex gap-5 rounded-[28px] bg-ink text-cream p-6 md:p-7">
-        <div class="w-14 h-14 shrink-0 rounded-2xl bg-orange/30 flex items-center justify-center text-2xl">⚡</div>
+        <div class="w-14 h-14 shrink-0 rounded-2xl bg-orange/30 text-orange flex items-center justify-center">
+          <svg class="ico w-7 h-7" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+        </div>
         <div>
           <p class="text-xs font-bold uppercase tracking-widest text-lilac mb-1">Und dann</p>
           <h2 class="font-display font-bold text-2xl text-cream mb-2">„Wer hat heute Zeit?"</h2>

@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#5E1AF4" />
   <meta name="robots" content="noindex" />
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%235E1AF4'/><path d='M16 25.2c-1.6-1.3-7.2-5.2-7.2-10A4.6 4.6 0 0 1 16 11.6a4.6 4.6 0 0 1 7.2 3.6c0 4.8-5.6 8.7-7.2 10z' fill='%23F7F1EA'/></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,6 +34,9 @@
   <style>
     body { font-family: 'Inter', sans-serif; color: #241B3A; }
     .font-display { font-family: 'Fraunces', serif; font-variation-settings: 'SOFT' 40, 'WONK' 1; }
+    /* Strich-Icons statt Emoji: erben die Markenfarbe und sehen auf jedem
+       Gerät gleich aus, statt vom Emoji-Satz des Betriebssystems abzuhängen. */
+    .ico { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   </style>
 </head>
 
@@ -83,8 +86,10 @@
       <h2 class="font-display font-black text-ink text-3xl tracking-tight mb-6">Was die App tatsächlich macht</h2>
 
       <div class="space-y-4">
-        <div class="flex gap-5 rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-          <div class="w-14 h-14 shrink-0 rounded-2xl bg-lilac/70 flex items-center justify-center text-2xl">🌿</div>
+        <div class="flex gap-5 rounded-[28px] bg-white shadow-lg shadow-ink/5 p-6 md:p-7">
+          <div class="w-14 h-14 shrink-0 rounded-2xl bg-lilac/70 text-ink flex items-center justify-center">
+            <svg class="ico w-7 h-7" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          </div>
           <div>
             <h3 class="font-display font-bold text-xl text-ink mb-2">Sie zeigt die Frau, nicht das Kind</h3>
             <p class="text-ink/70 leading-relaxed">
@@ -95,8 +100,10 @@
           </div>
         </div>
 
-        <div class="flex gap-5 rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-          <div class="w-14 h-14 shrink-0 rounded-2xl bg-peach flex items-center justify-center text-2xl">📍</div>
+        <div class="flex gap-5 rounded-[28px] bg-white shadow-lg shadow-ink/5 p-6 md:p-7">
+          <div class="w-14 h-14 shrink-0 rounded-2xl bg-peach text-ink flex items-center justify-center">
+            <svg class="ico w-7 h-7" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div>
             <h3 class="font-display font-bold text-xl text-ink mb-2">Sie bleibt in der Region</h3>
             <p class="text-ink/70 leading-relaxed">
@@ -107,8 +114,10 @@
           </div>
         </div>
 
-        <div class="flex gap-5 rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-          <div class="w-14 h-14 shrink-0 rounded-2xl bg-pink flex items-center justify-center text-2xl">☕</div>
+        <div class="flex gap-5 rounded-[28px] bg-white shadow-lg shadow-ink/5 p-6 md:p-7">
+          <div class="w-14 h-14 shrink-0 rounded-2xl bg-pink text-ink flex items-center justify-center">
+            <svg class="ico w-7 h-7" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="3"/><path d="M3 10h18"/><path d="m8.5 15.5 2.2 2.2 4.3-4.3"/></svg>
+          </div>
           <div>
             <h3 class="font-display font-bold text-xl text-ink mb-2">Sie hilft beim eigentlich Schweren</h3>
             <p class="text-ink/70 leading-relaxed">
@@ -119,8 +128,10 @@
           </div>
         </div>
 
-        <div class="flex gap-5 rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-          <div class="w-14 h-14 shrink-0 rounded-2xl bg-lilac/70 flex items-center justify-center text-2xl">🗺️</div>
+        <div class="flex gap-5 rounded-[28px] bg-white shadow-lg shadow-ink/5 p-6 md:p-7">
+          <div class="w-14 h-14 shrink-0 rounded-2xl bg-lilac/70 text-ink flex items-center justify-center">
+            <svg class="ico w-7 h-7" viewBox="0 0 24 24"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3z"/><path d="M9 3v15"/><path d="M15 6v15"/></svg>
+          </div>
           <div>
             <h3 class="font-display font-bold text-xl text-ink mb-2">Sie sammelt Wissen von hier</h3>
             <p class="text-ink/70 leading-relaxed">
@@ -179,45 +190,62 @@
       </ul>
     </div>
 
-    <!-- ---------- Was es nicht ist ---------- -->
-    <div class="mt-16">
-      <h2 class="font-display font-black text-ink text-3xl tracking-tight mb-4">Was mamabande nicht ist</h2>
-      <p class="text-ink/75 leading-relaxed max-w-xl mb-4">
+    <!-- ---------- Was es nicht ist ----------
+         Gegenstück zum dunklen Sicherheits-Block: gleiche Bauweise, aber
+         weiße Fläche mit orangem Rahmen. Die Aufzählungszeichen sind dieselben
+         Sterne wie oben, nur in Orange, damit sie nicht wie vorher als blasse
+         Mittelpunkte verschwinden. -->
+    <div class="mt-16 rounded-[28px] bg-white ring-2 ring-orange p-7 md:p-9">
+      <h2 class="font-display font-black text-ink text-3xl tracking-tight mb-3">Was mamabande nicht ist</h2>
+      <p class="text-ink/75 leading-relaxed mb-5">
         Damit klar ist, worauf Sie sich einlassen würden:
       </p>
-      <ul class="space-y-2.5 text-ink/75 leading-relaxed max-w-xl">
-        <li class="flex gap-3"><span class="text-orange shrink-0">·</span> <span><strong>Keine Beratung.</strong> Wo Fachhilfe nötig ist, etwa bei einer Wochenbettdepression, ersetzt eine App nichts. Sie kann nur die Einsamkeit dazwischen kleiner machen.</span></li>
-        <li class="flex gap-3"><span class="text-orange shrink-0">·</span> <span><strong>Kein Wettbewerb zu Ihren Angeboten.</strong> Im Gegenteil: In der App können Mütter Kurse und Orte eintragen und weiterempfehlen. Sie führt zu Ihnen hin, nicht von Ihnen weg.</span></li>
-        <li class="flex gap-3"><span class="text-orange shrink-0">·</span> <span><strong>Kein Aufwand für Sie.</strong> Es gibt nichts zu betreuen, nichts zu moderieren und keine Software zu installieren. Ein Aushang oder ein Blatt in einer Mappe, mehr ist es nicht.</span></li>
-        <li class="flex gap-3"><span class="text-orange shrink-0">·</span> <span><strong>Noch nicht fertig.</strong> Wir stehen am Anfang eines Pilotbetriebs im Kreis Unna. Was die ersten Mütter mir sagen, entscheidet, was als Nächstes gebaut wird.</span></li>
+      <ul class="space-y-3 text-ink/75 leading-relaxed">
+        <li class="flex gap-3"><span class="text-orange font-bold shrink-0">✶</span> <span><strong class="text-ink">Keine Beratung.</strong> Wo Fachhilfe nötig ist, etwa bei einer Wochenbettdepression, ersetzt eine App nichts. Sie kann nur die Einsamkeit dazwischen kleiner machen.</span></li>
+        <li class="flex gap-3"><span class="text-orange font-bold shrink-0">✶</span> <span><strong class="text-ink">Kein Wettbewerb zu Ihren Angeboten.</strong> Im Gegenteil: In der App können Mütter Kurse und Orte eintragen und weiterempfehlen. Sie führt zu Ihnen hin, nicht von Ihnen weg.</span></li>
+        <li class="flex gap-3"><span class="text-orange font-bold shrink-0">✶</span> <span><strong class="text-ink">Kein Aufwand für Sie.</strong> Es gibt nichts zu betreuen, nichts zu moderieren und keine Software zu installieren. Ein Aushang oder ein Blatt in einer Mappe, mehr ist es nicht.</span></li>
+        <li class="flex gap-3"><span class="text-orange font-bold shrink-0">✶</span> <span><strong class="text-ink">Noch nicht fertig.</strong> Wir stehen am Anfang eines Pilotbetriebs im Kreis Unna. Was die ersten Mütter mir sagen, entscheidet, was als Nächstes gebaut wird.</span></li>
       </ul>
     </div>
 
     <!-- ---------- Zusammenarbeit ---------- -->
     <div class="mt-16">
       <h2 class="font-display font-black text-ink text-3xl tracking-tight mb-6">Drei Wege, wie Sie helfen können</h2>
+      <!-- Drei Wege = drei Möglichkeiten zur Auswahl. Jede bekommt eine eigene
+           Markenfläche und eine große Ziffer im weißen Kreis, statt dreimal
+           denselben blassen Rahmen auf demselben Untergrund. Die Farbfolge
+           läuft von hell nach kräftig und markiert damit auch die Reihenfolge. -->
       <div class="space-y-4">
-        <div class="rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-          <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Der kleinste Schritt</p>
-          <h3 class="font-display font-bold text-xl text-ink mb-2">Ein Aushang am schwarzen Brett</h3>
-          <p class="text-ink/70 leading-relaxed">Ein DIN-A4-Blatt mit QR-Code. Ich bringe es vorbei oder schicke es als PDF zum Selbstausdrucken.</p>
+        <div class="flex gap-5 rounded-[28px] bg-lilac/45 p-6 md:p-7">
+          <span class="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center font-display font-black text-xl text-purple">1</span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Der kleinste Schritt</p>
+            <h3 class="font-display font-bold text-xl text-ink mb-2">Ein Aushang am schwarzen Brett</h3>
+            <p class="text-ink/75 leading-relaxed">Ein DIN-A4-Blatt mit QR-Code. Ich bringe es vorbei oder schicke es als PDF zum Selbstausdrucken.</p>
+          </div>
         </div>
-        <div class="rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-          <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Der wirksamste Schritt</p>
-          <h3 class="font-display font-bold text-xl text-ink mb-2">Ein Blatt in der Mappe zum Erstgespräch</h3>
-          <p class="text-ink/70 leading-relaxed">
-            Wo Sie ohnehin mit jeder neuen Familie sprechen, erreicht ein beigelegtes Blatt genau
-            die Frauen, die noch niemanden kennen, und zwar im richtigen Moment. Für Sie bleibt es
-            bei einem Blatt mehr in einer Mappe, die es sowieso gibt.
-          </p>
+        <div class="flex gap-5 rounded-[28px] bg-pink/70 p-6 md:p-7">
+          <span class="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center font-display font-black text-xl text-purple">2</span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Der wirksamste Schritt</p>
+            <h3 class="font-display font-bold text-xl text-ink mb-2">Ein Blatt in der Mappe zum Erstgespräch</h3>
+            <p class="text-ink/75 leading-relaxed">
+              Wo Sie ohnehin mit jeder neuen Familie sprechen, erreicht ein beigelegtes Blatt genau
+              die Frauen, die noch niemanden kennen, und zwar im richtigen Moment. Für Sie bleibt es
+              bei einem Blatt mehr in einer Mappe, die es sowieso gibt.
+            </p>
+          </div>
         </div>
-        <div class="rounded-[28px] bg-cream ring-1 ring-ink/10 p-6 md:p-7">
-          <p class="text-xs font-bold uppercase tracking-widest text-purple mb-1">Wenn Sie mögen</p>
-          <h3 class="font-display font-bold text-xl text-ink mb-2">Ehrliche Rückmeldung</h3>
-          <p class="text-ink/70 leading-relaxed">
-            Sie sprechen jeden Tag mit der Zielgruppe und sehen, was fehlt. Wenn Sie mir sagen,
-            was an der App an der Realität vorbeigeht, ist mir damit sehr geholfen.
-          </p>
+        <div class="flex gap-5 rounded-[28px] bg-ink p-6 md:p-7">
+          <span class="w-12 h-12 shrink-0 rounded-full bg-lilac/25 flex items-center justify-center font-display font-black text-xl text-lilac">3</span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-lilac mb-1">Wenn Sie mögen</p>
+            <h3 class="font-display font-bold text-xl text-cream mb-2">Ehrliche Rückmeldung</h3>
+            <p class="text-cream/75 leading-relaxed">
+              Sie sprechen jeden Tag mit der Zielgruppe und sehen, was fehlt. Wenn Sie mir sagen,
+              was an der App an der Realität vorbeigeht, ist mir damit sehr geholfen.
+            </p>
+          </div>
         </div>
       </div>
     </div>

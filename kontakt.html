@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#5E1AF4" />
   <meta name="robots" content="noindex" />
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%235E1AF4'/><path d='M16 25.2c-1.6-1.3-7.2-5.2-7.2-10A4.6 4.6 0 0 1 16 11.6a4.6 4.6 0 0 1 7.2 3.6c0 4.8-5.6 8.7-7.2 10z' fill='%23F7F1EA'/></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -32,6 +32,9 @@
   <style>
     body { font-family: 'Inter', sans-serif; color: #241B3A; }
     .font-display { font-family: 'Fraunces', serif; font-variation-settings: 'SOFT' 40, 'WONK' 1; }
+    /* Strich-Icons statt Emoji: erben die Markenfarbe und sehen auf jedem
+       Gerät gleich aus, statt vom Emoji-Satz des Betriebssystems abzuhängen. */
+    .ico { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   </style>
 </head>
 
@@ -53,8 +56,10 @@
 
     <div class="space-y-4">
       <a href="mailto:info@mamabande.de"
-        class="flex items-center gap-4 rounded-3xl bg-cream ring-1 ring-ink/10 p-6 hover:ring-purple/40 transition">
-        <span class="text-2xl">✉️</span>
+        class="flex items-center gap-4 rounded-3xl bg-white shadow-lg shadow-ink/5 p-6 ring-1 ring-transparent hover:ring-purple/40 transition">
+        <span class="w-12 h-12 shrink-0 rounded-2xl bg-lilac/60 text-ink flex items-center justify-center">
+          <svg class="ico w-6 h-6" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="3"/><path d="m22 7.5-9 5.5a2 2 0 0 1-2 0L2 7.5"/></svg>
+        </span>
         <span>
           <span class="block font-semibold text-ink">E-Mail</span>
           <span class="block text-ink/70">info@mamabande.de</span>
